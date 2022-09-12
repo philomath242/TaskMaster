@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 class="title">Task Master </h1>
+    {% if count < 1 %}
+    <h1 class="no-task-header">There are no tasks. Create one below ! </h1>
+    {% else %}
+    <table>
+    <tr>
+        <th>Task</th>
+        <th>Added On</th>
+        <th>Actions</th>
+
+    </tr>
+        {% for task in tasks %}
+        <tr>
+            <td class="td--content"> {{ task.content }}</td>
+            <td class="td--created_on">{{ task.created_on }}</td>
+            <td class="actions">
+                <a href="/update/{{ task._id }}"> Update</a>
+                <br>
+                <a href="/delete/{{ task._id }}"> Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <form action="/" method="POST">
+        <input type="text" name="content" class="content">
+        <input type="submit" value="Add Task">
+    </form>
+
+</div>
+{% endblock %}

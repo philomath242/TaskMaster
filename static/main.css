@@ -1,0 +1,94 @@
+body{
+    background-color: rgba(255, 130, 192, 0.38);
+}
+.title {
+    font-family: Allura, serif;
+    color: darkblue;
+    font-weight: bold;
+    font-size: 5.5rem;
+    margin: 0 auto -5px;
+}
+
+.container{
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+tr, table, th, td {
+    border: rgb(160,160,255) solid 1px;
+}
+
+table{
+    font-size: larger;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+.actions{
+    padding: 1px;
+    line-height: 2rem;
+}
+.actions a{
+    font-size: x-large;
+    margin-bottom: 2px;
+    text-decoration: none;
+    font-family: monospace;
+}
+.actions a:first-child{
+    cursor: alias;
+    color: blue;
+}
+.actions a:last-child{
+    cursor: url("../static/delete_cursor.png"), default;
+    color: darkred;
+}
+th{
+    font-weight: bolder;
+    font-family: "Doppio One", serif;
+    font-size: 1.7rem;
+    color: #3d2929;
+    padding: 5px 30px;
+}
+td{
+    padding: 0 30px;
+}
+.td--content{
+    font-family: "Roboto Light", serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+
+}
+.td--created_on{
+    font-family: "Source Code Pro", serif;
+    font-size: 1.3rem;
+    font-style: italic;
+
+}
+form{
+    margin: 20px;
+    display: flex;
+    width: auto;
+}
+input[type="text"]{
+    cursor: pointer;
+    border: dotted 1px #fca2d1;
+    border-radius: 10px;
+    font-size: x-large;
+    width: 70%;
+    height: 80px;
+    line-height: 80px;
+    margin: auto 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+input[type="submit"]{
+    border: solid 2px #208607;
+    border-radius: 15px;
+    color: #02187a;
+    background: #a3ff8e;
+    width: available;
+    padding: 10px 20px;
+    font-size: xx-large;
+    margin: auto;
+}
